@@ -1,0 +1,119 @@
+:root {
+  --ttt-primary: #ffffff;
+  --ttt-secondary: #222222;
+  --ttt-accent: #4caf50;
+  --ttt-x-color: #222222;
+  --ttt-o-color: #4caf50;
+  --ttt-bg-container: #ffffff;
+  --ttt-border: #e0e0e0;
+  --ttt-shadow: 0 4px 24px rgba(60,60,60,0.08);
+}
+
+.ttt-classic-wrapper {
+  background: var(--ttt-primary);
+  color: var(--ttt-secondary);
+  border-radius: 20px;
+  box-shadow: var(--ttt-shadow);
+  padding: 36px 32px 28px 32px;
+  width: 340px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: inherit;
+}
+
+.ttt-classic-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.ttt-status {
+  font-size: 1.15rem;
+  margin-bottom: 26px;
+  min-height: 32px;
+  text-align: center;
+}
+
+.ttt-turn .ttt-x {
+  color: var(--ttt-x-color);
+  font-weight: bold;
+}
+.ttt-turn .ttt-o {
+  color: var(--ttt-o-color);
+  font-weight: bold;
+}
+.ttt-win .ttt-x {
+  color: var(--ttt-x-color);
+  font-weight: bold;
+}
+.ttt-win .ttt-o {
+  color: var(--ttt-o-color);
+  font-weight: bold;
+}
+.ttt-draw {
+  color: #B0B0B0;
+  font-weight: bold;
+}
+
+.ttt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  gap: 2px;
+  margin-bottom: 32px;
+  background: var(--ttt-border);
+  border-radius: 8px;
+}
+.ttt-square {
+  width: 70px;
+  height: 70px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  background: var(--ttt-primary);
+  color: var(--ttt-secondary);
+  border: 2px solid var(--ttt-border);
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.ttt-square:focus {
+  background: #f1f1f1;
+}
+.ttt-square:hover:not(:disabled) {
+  background: #f6ffe8;
+}
+
+.ttt-square[aria-label*="X"], .ttt-x {
+  color: var(--ttt-x-color);
+}
+.ttt-square[aria-label*="O"], .ttt-o {
+  color: var(--ttt-o-color);
+}
+
+.ttt-controls {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.ttt-reset {
+  background: var(--ttt-accent) !important;
+  color: #fff !important;
+  font-weight: 500;
+  border-radius: 6px;
+  margin: 0 auto;
+  min-width: 120px;
+  transition: background 0.18s;
+}
+.ttt-reset:hover {
+  background: #18863e !important;
+}
